@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <fields name="Settings" icon="uk-icon-cogs">
+        <field type="section" name="Styles" description="Use the customizer to create your own style. You can pick colors, modify sizes and much more with a real time theme preview. Choose the style to be loaded in the layout options." />
+        <field type="customizer" />
+        <field type="section" name="Development" description="Always uncheck following options for your production website." />
+        <field type="checkbox" name="dev_mode" value="1" label="Compile LESS in the browser on every page load." />
+        <field type="checkbox" name="dynamic_style" value="0" label="Allow styles to be loaded by URL. This will override the style originally loaded by the theme." />
+        <field type="compile" />
+        <field type="section" name="Compression" description="Minify CSS and JavaScript into a single file. Use gzip compression and Data URIs to reduce image file requests." />
+        <field type="select" name="compression" default="0">
+            <option value="0">None</option>
+            <option value="1">Minify</option>
+            <option value="2">Minify + Data URIs</option>
+            <option value="3">Minify + Data URIs + Gzip</option>
+        </field>
+        <field type="section" name="Responsive" description="The viewport meta tag controls the layout on mobile browsers. If it's not set, the default width on mobile is 980px and the site will look the same like on desktops." />
+        <field type="checkbox" name="responsive" value="0" label="Disable the viewport meta tag." />
+        <field type="section" name="Content" description="Display specific content elements in the theme." />
+        <field type="checkbox" name="totop_scroller" value="0" label="Hide To-top scroller." />
+        <field type="checkbox" name="warp_branding" value="0" label="Hide Warp branding." />
+					
+        <field type="section" name="Social Buttons" description="Display Tweet, Google+ or Like buttons in your posts to share them in social media." />
+        <field type="checkbox" name="twitter" value="1" label="Show Tweet button." />
+        <field type="checkbox" name="plusone" value="1" label="Show Google+ button." />
+        <field type="checkbox" name="facebook" value="1" label="Show Facebook Like button." />
+        <field type="section" name="Modules" description="Choose the default module style for each position." />
+        <field type="table" name="panel_default">
+            <rows label="Position">
+                <row>top-a</row>
+                <row>top-b</row>
+                <row>bottom-a</row>
+                <row>bottom-b</row>
+                <row>main-top</row>
+                <row>main-bottom</row>
+                <row>sidebar-a</row>
+                <row>sidebar-b</row>
+            </rows>
+            <field type="select" name="panel" label="Style">
+                <option value="uk-panel">Blank</option>
+                <option value="uk-panel uk-panel-box">Box</option>
+                <option value="uk-panel uk-panel-box uk-panel-box-primary">Box Primary</option>
+                <option value="uk-panel uk-panel-box uk-panel-box-secondary">Box Secondary</option>
+                <option value="uk-panel uk-panel-header">Header</option>
+                <option value="uk-panel uk-panel-space">Space</option>
+            </field>
+        </field>
+		
+        <field type="section" name="Section" description="Choose the default padding for each section." />
+		<field type="text" class="uk-form-width-mini" default="20" name="menu-search" description="Section padding &quot;menu-search&quot;" />
+		<field type="text" class="uk-form-width-mini" default="20" name="toolbars" description="Section padding &quot;toolbars&quot;" />
+		<field type="text" class="uk-form-width-mini" default="20" name="logoheaderbar" description="Section padding &quot;logo-headerbar&quot;" />
+		<field type="text" class="uk-form-width-mini" default="20" name="topa" description="Section padding &quot;top-a&quot;" />
+		<field type="text" class="uk-form-width-mini" default="20" name="topb" description="Section padding &quot;top-b&quot;" />
+		<field type="text" class="uk-form-width-mini" default="20" name="maintop" description="Section padding &quot;main&quot;" />
+		<field type="text" class="uk-form-width-mini" default="20" name="bottoma" description="Section padding &quot;bottom-a&quot;" />
+		<field type="text" class="uk-form-width-mini" default="20" name="bottomb" description="Section padding &quot;bottom-b&quot;" />
+		<field type="text" class="uk-form-width-mini" default="20" name="footer" description="Section padding &quot;footer&quot;" />
+
+        <field type="section" name="Additional Scripts" description="Insert your Google Analytics tracking code or any other additional scripts here. They will be added before the closing body tag in the theme." />
+        <field type="textarea" name="tracking_code" class="uk-form-width-large" rows="8" />
+    </fields>
+    <fields name="Layouts" icon="uk-icon-columns">
+        <field type="layouts" name="layouts">
+            <field type="section" name="Style" description="Select which style the layout should load." />
+            <field type="style" name="style" />
+            <field type="section" name="Content" description="Display specific content elements in the theme." />
+            <field type="checkbox" name="system_output" value="0" label="Hide system output." />
+			<field type="section" name="max-width" description="Maximum width of the Site in pixel." />
+			<field name="maxwidth" type="text" default="980" description="px" class="uk-form-width-mini" />
+			<field type="section" name="animate.css" description="animate.css - A cross-browser library of CSS animations." />
+			<field type="checkbox" name="animate" value="0" label="Hide animate.css, jquery.appear.js, theme.animate.js." />
+			<field type="section" name="Fonts" description="Use Google Fonts." />
+			<field name="googlefont" type="text" default="Oswald" description="Google Fonts &apos;body&apos;" />
+			<field name="fontweight" type="text" default="400" description="Google Font-weight &apos;body&apos;" />
+			<field name="googlefontH" type="text" default="Ubuntu" description="Google Fonts Typograpy" />
+			<field name="fontweightH" type="text" default="500" description="Google Font-weight Typograpy" />			
+			<field type="section" name="Sidebars" description="Choose the sidebar widths and align the sidebar to the left or right." />
+            <field type="table" name="sidebars">
+                <rows label="Position">
+                    <row>sidebar-a</row>
+                    <row>sidebar-b</row>
+                </rows>
+                <field type="select" name="width" label="Width">
+                    <option value="12" data-gcf="6">20%</option>
+                    <option value="15" data-gcf="15">25%</option>
+                    <option value="18" data-gcf="6">30%</option>
+                    <option value="20" data-gcf="20">33%</option>
+                    <option value="24" data-gcf="6">40%</option>
+                    <option value="30" data-gcf="3">50%</option>
+                </field>
+                <field type="select" name="alignment" label="Alignment">
+                    <option value="left">Left</option>
+                    <option value="right">Right</option>
+                </field>
+            </field>
+            <field type="section" name="Grid" description="Choose the grid layout for each position. Further, you can enable horizontal dividers and prevent the responsive grid behavior. Note: Both options are not taken into account for the stacked layout." />
+            <field type="table" name="grid">
+                <rows label="Position">
+                    <row>top-a</row>
+                    <row>top-b</row>
+                    <row>bottom-a</row>
+                    <row>bottom-b</row>
+                    <row>main-top</row>
+                    <row>main-bottom</row>
+                </rows>
+                <field type="select" name="layout" label="Layout">
+                    <option value="parallel">Parallel</option>
+                    <option value="stacked">Stacked</option>
+                    <option value="doubled">First doubled</option>
+                </field>
+                <field type="select" name="responsive" label="Responsive" default="medium">
+                    <option value="">Disabled</option>
+                    <option value="medium">Stack on phones</option>
+                    <option value="large">Stack on ≤ tablets</option>
+                </field>
+                <field type="checkbox" name="divider" value="1" column="Divider" />
+            </field>
+        </field>
+    </fields>
+    <fields name="Modules" icon="uk-icon-th">
+        <field type="widgets" name="widgets">
+            <field type="text" name="class" label="Class" class="uk-form-width-small" tooltip="Add custom classes." />
+            <field type="select" name="panelanimate" label="Animate" tooltip="Choose module animation sequence.">
+                <option value="">Default</option>
+
+				<option value="data-animation=&apos;bounce&apos;">bounce</option>
+				<option value="data-animation=&apos;flash&apos;">flash</option>
+				<option value="data-animation=&apos;pulse&apos;">pulse</option>
+				<option value="data-animation=&apos;rubberBand&apos;">rubberBand</option>
+				<option value="data-animation=&apos;shake&apos;">shake</option>
+				<option value="data-animation=&apos;swing&apos;">swing</option>
+				<option value="data-animation=&apos;tada&apos;">tada</option>
+				<option value="data-animation=&apos;wobble&apos;">wobble</option>
+
+				<option value="data-animation=&apos;bounceIn&apos;">bounceIn</option>
+				<option value="data-animation=&apos;bounceInDown&apos;">bounceInDown</option>
+				<option value="data-animation=&apos;bounceInLeft&apos;">bounceInLeft</option>
+				<option value="data-animation=&apos;bounceInRight&apos;">bounceInRight</option>
+				<option value="data-animation=&apos;bounceInUp&apos;">bounceInUp</option>
+
+				<option value="data-animation=&apos;bounceOut&apos;">bounceOut</option>
+				<option value="data-animation=&apos;bounceOutDown&apos;">bounceOutDown</option>
+				<option value="data-animation=&apos;bounceOutLeft&apos;">bounceOutLeft</option>
+				<option value="data-animation=&apos;bounceOutRight&apos;">bounceOutRight</option>
+				<option value="data-animation=&apos;bounceOutUp&apos;">bounceOutUp</option>							  
+
+				<option value="data-animation=&apos;fadeIn&apos;">fadeIn</option>
+				<option value="data-animation=&apos;fadeInDown&apos;">fadeInDown</option>
+				<option value="data-animation=&apos;fadeInDownBig&apos;">fadeInDownBig</option>
+				<option value="data-animation=&apos;fadeInLeft&apos;">fadeInLeft</option>
+				<option value="data-animation=&apos;fadeInLeftBig&apos;">fadeInLeftBig</option>
+				<option value="data-animation=&apos;fadeInRight&apos;">fadeInRight</option>
+				<option value="data-animation=&apos;fadeInRightBig&apos;">fadeInRightBig</option>
+				<option value="data-animation=&apos;fadeInUp&apos;">fadeInUp</option>
+				<option value="data-animation=&apos;fadeInUpBig&apos;">fadeInUpBig</option>
+
+				<option value="data-animation=&apos;fadeOut&apos;">fadeOut</option>
+				<option value="data-animation=&apos;fadeOutDown&apos;">fadeOutDown</option>
+				<option value="data-animation=&apos;fadeOutDownBig&apos;">fadeOutDownBig</option>
+				<option value="data-animation=&apos;fadeOutLeft&apos;">fadeOutLeft</option>
+				<option value="data-animation=&apos;fadeOutLeftBig&apos;">fadeOutLeftBig</option>
+				<option value="data-animation=&apos;fadeOutRight&apos;">fadeOutRight</option>
+				<option value="data-animation=&apos;fadeOutRightBig&apos;">fadeOutRightBig</option>
+				<option value="data-animation=&apos;fadeOutUp&apos;">fadeOutUp</option>
+				<option value="data-animation=&apos;fadeOutUpBig&apos;">fadeOutUpBig</option>							  
+
+				<option value="data-animation=&apos;flip&apos;">flip</option>
+				<option value="data-animation=&apos;flipInX&apos;">flipInX</option>
+				<option value="data-animation=&apos;flipInY&apos;">flipInY</option>
+				<option value="data-animation=&apos;flipOutX&apos;">flipOutX</option>
+				<option value="data-animation=&apos;flipOutY&apos;">flipOutY</option>
+
+				<option value="data-animation=&apos;lightSpeedIn&apos;">lightSpeedIn</option>
+				<option value="data-animation=&apos;lightSpeedOut&apos;">lightSpeedOut</option>
+
+				<option value="data-animation=&apos;rotateIn&apos;">rotateIn</option>
+				<option value="data-animation=&apos;rotateInDownLeft&apos;">rotateInDownLeft</option>
+				<option value="data-animation=&apos;rotateInDownRight&apos;">rotateInDownRight</option>
+				<option value="data-animation=&apos;rotateInUpLeft&apos;">rotateInUpLeft</option>
+				<option value="data-animation=&apos;rotateInUpRight&apos;">rotateInUpRight</option>
+
+				<option value="data-animation=&apos;rotateOut&apos;">rotateOut</option>
+				<option value="data-animation=&apos;rotateOutDownLeft&apos;">rotateOutDownLeft</option>
+				<option value="data-animation=&apos;rotateOutDownRight&apos;">rotateOutDownRight</option>
+				<option value="data-animation=&apos;rotateOutUpLeft&apos;">rotateOutUpLeft</option>
+				<option value="data-animation=&apos;rotateOutUpRight&apos;">rotateOutUpRight</option>							  
+
+				<option value="data-animation=&apos;hinge&apos;">hinge</option>
+				<option value="data-animation=&apos;rollIn&apos;">rollIn</option>
+				<option value="data-animation=&apos;rollOut&apos;">rollOut</option>
+
+				<option value="data-animation=&apos;zoomIn&apos;">zoomIn</option>
+				<option value="data-animation=&apos;zoomInDown&apos;">zoomInDown</option>
+				<option value="data-animation=&apos;zoomInLeft&apos;">zoomInLeft</option>
+				<option value="data-animation=&apos;zoomInRight&apos;">zoomInRight</option>
+				<option value="data-animation=&apos;zoomInUp&apos;">zoomInUp</option>							  
+
+				<option value="data-animation=&apos;zoomOut&apos;">zoomOut</option>
+				<option value="data-animation=&apos;zoomOutDown&apos;">zoomOutDown</option>
+				<option value="data-animation=&apos;zoomOutLeft&apos;">zoomOutLeft</option>
+				<option value="data-animation=&apos;zoomOutRight&apos;">zoomOutRight</option>
+				<option value="data-animation=&apos;zoomOutUp&apos;">zoomOutUp</option>
+            </field>
+            <field type="text" class="uk-form-width-mini"  name="panelanimatedelay" label="Time" tooltip="Add animation-delay in milliseconds. Example: 1000" />
+			
+            <field type="select" name="panel" label="Style" tooltip="Choose module styles. Set the default module style in the settings.">
+                <option value="uk-panel">Blank</option>
+                <option value="uk-panel uk-panel-box">Box</option>
+                <option value="uk-panel uk-panel-box uk-panel-box-primary">Box Primary</option>
+                <option value="uk-panel uk-panel-box uk-panel-box-secondary">Box Secondary</option>
+                <option value="uk-panel uk-panel-header">Header</option>
+				<option value="uk-panel uk-panel-icon">Icon</option>
+                <option value="uk-panel uk-panel-space">Space</option>
+                
+            </field>
+            <field type="text" name="icon" label="Icon" class="uk-form-width-small" tooltip="Add UIkit icon classes or image urls." />
+            <field type="badge" name="badge" label="Badge" tooltip="Set the badge colors and text.">
+                <option value="uk-panel-badge uk-badge">Default</option>
+                <option value="uk-panel-badge uk-badge uk-badge-success">Success</option>
+                <option value="uk-panel-badge uk-badge uk-badge-warning">Warning</option>
+                <option value="uk-panel-badge uk-badge uk-badge-danger">Danger</option>
+            </field>
+            <field type="display" name="display" label="Display" tooltip="Display or hide modules on certain devices." />
+        </field>	
+    </fields>
+    <fields name="Menus" icon="uk-icon-bars">
+        <field type="menus">
+            <field type="select" name="columns" default="1" label="Columns" max-depth="1">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </field>
+            <field type="text" name="columnwidth" label="Column Width" class="uk-form-width-small" placeholder="px" max-depth="1" />
+            <field type="text" name="icon" label="Icon" class="uk-form-width-small" tooltip="Add UIkit icon classes or image urls." />
+            <field type="text" name="subtitle" label="Subtitle" class="uk-form-width-small" tooltip="Add subtitles tu menu items." />
+        </field>
+    </fields>
+    <fields name="Information" icon="uk-icon-info-circle">
+        <field type="section" name="Versions" description="This theme is based on the Warp framework. Always keep the theme and the Warp framework up-to-date." />
+        <field type="info" />
+        <field type="section" name="System Check" />
+        <field type="check" />
+        <field type="section" name="File Verification" />
+        <field type="verify" />
+    </fields>
+</config>
