@@ -1,0 +1,17 @@
+div {
+	width: 100px;
+	height: 150px;
+	float: left;
+	padding: 3px;
+}
+input {
+	width: 100px;
+	height: 150px;
+}
+div.field {
+	width: 400px;
+	float: left;
+	padding: 3px;
+	margin: 5px;
+	background-color: #ddd;
+}
